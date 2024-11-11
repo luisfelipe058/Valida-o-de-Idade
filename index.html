@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Idade</title>
+</head>
+
+<body style="text-align: center; font-family: Arial, Helvetica, sans-serif; margin-top: 15%; background-color: #f1f1f1;">
+
+    <div class="formulario" style="background-color: rgb(101, 204, 4); padding: 40px; margin-left: 20%; margin-right: 20%; border-radius: 15px;">
+    <h1>Compre sua Passagem aqui</h1>
+
+    
+        <p>Por favor, digite sua idade:</p>
+        <input type="number" id="idadeInput">
+        <button onclick="verificarIdade()">Verificar</button>
+    </div>
+
+    <script>
+        function verificarIdade() {
+            const idade = parseInt(document.getElementById("idadeInput").value);
+
+            if (idade >= 18) {
+
+                window.location.href = "meusite.html";
+            } else {
+                window.location.href = "menor.html";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
